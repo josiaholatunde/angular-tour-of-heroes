@@ -1,0 +1,18 @@
+
+<div *ngIf="currentHero">
+  <a (click)="goBack()">
+      <i class="fa fa-arrow-circle-left text-primary"></i><span>Go Back</span>
+  </a>
+  <h2>{{currentHero.name | uppercase}} Details</h2>
+  <div class="form-group">
+    <label>Id:</label>&nbsp;&nbsp; <span>{{currentHero.id}}</span>
+  </div>
+  <div class="form-group">
+    <label>Name:</label>
+      <input [(ngModel)]="currentHero.name" class="form-control" placeholder="Enter your name"/>
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="updateHero(currentHero)" style="margin-right:5px;">Update</button>
+  </div>
+
+</div>

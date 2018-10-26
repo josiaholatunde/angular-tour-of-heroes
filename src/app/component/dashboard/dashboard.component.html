@@ -1,0 +1,22 @@
+<div class="container">
+  <div style="margin-bottom: 3px;">
+    <a class="text-primary" routerLink="/heroes">
+        <i class="fa fa-arrow-circle-right"></i>See all Heroes
+    </a>
+  </div>
+  <div class="card">
+    <div class="card card-header">
+       <h2>Top Heroes</h2>
+    </div>
+    <div class="card-body">
+        <ul class="nav-list">
+
+              <li *ngFor="let hero of heroes">
+                  <a routerLink="/detail/{{hero.id}}">
+                    {{hero.name}}
+                  </a>
+              </li>
+        </ul>
+    </div>
+  </div>
+</div>

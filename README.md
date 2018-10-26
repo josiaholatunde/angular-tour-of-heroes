@@ -1,4 +1,7 @@
 # HeroesApp
+This project is the tutorial on the Angular documentation page to show best practices in creating an Angular application.
+I performed CRUD operations with heroes object which are a representation of a heroes model and used a mock service to perform api calls to perform CRUD operations.
+I performed routing using the built in Angular Router module and created a separate module for specify the components to load when a route path is matched.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 

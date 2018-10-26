@@ -1,0 +1,34 @@
+<div class="card">
+  <div></div>
+  <div class="card-body">
+      <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" #heroName (ngModelChange)="resetError()" value="" />
+            <span class="text-danger" *ngIf="error">Name field can not be empty</span>
+          </div>
+          <div>
+            <button class="btn btn-secondary submit" (click)="addHero(heroName.value)">Add Hero</button>
+          </div>
+        </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+      Tour of Heroes
+  </div>
+  <div class="card-body">
+      <ul>
+          <li
+          [class.current]="hero === presentHero"
+           *ngFor="let presentHero of heroes">
+            <a routerLink="/detail/{{presentHero.id}}" (click) ="handleClick(presentHero)">{{presentHero.name}}</a>
+            <a  (click)="deleteHero(presentHero)">
+              <i class="fa fa-times" style="float:right"></i>
+            </a>
+          </li>
+        </ul>
+  </div>
+</div>
+
